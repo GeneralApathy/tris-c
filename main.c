@@ -111,7 +111,10 @@
       }
 
       //Controllo diagonale
-      if (tris[0][0] == 'x' && tris[1][1] == 'x' && tris[2][2] == 'x') {
+      if (
+          (tris[0][0] == 'x' && tris[1][1] == 'x' && tris[2][2] == 'x') ||
+          (tris[0][2] == 'x' && tris[1][1] == 'x' && tris[2][0] == 'x')
+         ) {
 
         won1 = true;
         moves = 10;
@@ -120,7 +123,10 @@
 
       }
 
-      if (tris[0][0] == 'o' && tris[1][1] == 'o' && tris[2][2] == 'o') {
+      if (
+          (tris[0][0] == 'o' && tris[1][1] == 'o' && tris[2][2] == 'o') ||
+          (tris[0][2] == 'o' && tris[1][1] == 'o' && tris[2][0] == 'o')
+         ) {
 
         won2 = true;
         moves = 10;
